@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: app-api
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: app-api
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 31000
