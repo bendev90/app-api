@@ -15,5 +15,6 @@ spec:
       containers:
         - name: app-api
           image: app-api:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 3000
