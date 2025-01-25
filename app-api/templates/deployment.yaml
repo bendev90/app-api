@@ -1,19 +1,19 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-        name: app-api
-        spec:
-                replicas: 1
-                selector:
-                        matchLabels:
-                                app: app-api
-                                template:
-                                        metadata:
-                                                labels:
-                                                        app: app-api
-                                                        spec:
-                                                                containers:
-                                                                        - name: app-api
-                                                                          image: app-api
-                                                                          ports:
-                                                                                  - containerPort: 3000
+  name: my-node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-node-app
+  template:
+    metadata:
+      labels:
+        app: my-node-app
+    spec:
+      containers:
+        - name: my-node-app
+          image: my-node-app
+          ports:
+            - containerPort: 3000
